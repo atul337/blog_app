@@ -6,7 +6,10 @@ var methodOverride=require("method-override");
 var expressSanitizer=require("express-sanitizer");
 
 //APP CONFIG
-mongoose.connect("mongodb://localhost/restful_blog_app", {useNewUrlParser:true});
+
+//mongoose.connect("mongodb://localhost/restful_blog_app", {useNewUrlParser:true});
+mongoose.connect("mongodb+srv://atul337:<password>@cluster0-tkzvb.mongodb.net/test?retryWrites=true", {useNewUrlParser:true});
+
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended:true}));
